@@ -2,6 +2,7 @@ const express = require("express")
 const moongose = require("mongoose")
 
 const userRoutes = require("./routes/user.routes")
+const filmRoutes = require("./routes/film.routes")
 
 
 const app = express()
@@ -18,6 +19,7 @@ moongose.connect("mongodb+srv://obpalomo:ZrbmRvNtjT51bdY6@cluster1.zlkhvg5.mongo
 
 
 app.use("/api/users", userRoutes)
+app.use("/api/films", filmRoutes)
 
 
 app.listen(3000, () =>{
