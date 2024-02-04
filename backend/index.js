@@ -1,12 +1,14 @@
 const express = require("express")
 const moongose = require("mongoose")
-
+const cors = require("cors")
 const userRoutes = require("./routes/user.routes")
 const filmRoutes = require("./routes/film.routes")
 
 
 const app = express()
 app.use(express.json())
+
+app.use(cors())
 
 moongose.connect("mongodb+srv://obpalomo:ZrbmRvNtjT51bdY6@cluster1.zlkhvg5.mongodb.net/Movies")
 .then(() => {
@@ -15,7 +17,6 @@ moongose.connect("mongodb+srv://obpalomo:ZrbmRvNtjT51bdY6@cluster1.zlkhvg5.mongo
 .catch((err) => {
     console.log(`Error al conectar la base de datos: ${err}`);
 })
-
 
 
 app.use("/api/users", userRoutes)

@@ -28,12 +28,12 @@ export default function LoginForm() {
                             <div>
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Correo Electrónico</label>
-                                    <input type="email" value={datos.email} onChange={(e)=> setDatos({...datos, email: e.target.value})} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
+                                    <input type="email" value={datos.email} onChange={(e)=> setDatos({...datos, email: e.target.value})} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
                                     <div id="emailHelp" class="form-text">Nunca compartiremos tu correo electrónico con nadie más.</div>
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-                                    <input type="password" value={datos.password} onChange={(e)=> setDatos({...datos, password: e.target.value})} class="form-control" id="exampleInputPassword1"/>
+                                    <input type="password" value={datos.password} onChange={(e)=> setDatos({...datos, password: e.target.value})} class="form-control" id="exampleInputPassword1" />
                                 </div>
                                 <div class="mb-3 form-check">
                                     <input type="checkbox" class="form-check-input" id="exampleCheck1" />
