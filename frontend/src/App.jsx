@@ -31,7 +31,7 @@ function App() {
               <Link to="/films">Films</Link>
             </li> : ''}
 
-            {user ? <button className="btn btn-outline-danger" onClick={logout}>logout</button> : ''}
+            {user ? <button className="btn btn-outline-danger" onClick={logout}>Logout</button> : ''}
 
           </ul>
         </nav>
