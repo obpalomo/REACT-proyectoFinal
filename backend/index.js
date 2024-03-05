@@ -6,9 +6,12 @@ const filmRoutes = require("./routes/film.routes")
 
 
 const app = express()
-app.use(express.json())
 
 app.use(cors())
+
+app.use(express.json())
+
+
 
 moongose.connect("mongodb+srv://obpalomo:ZrbmRvNtjT51bdY6@cluster1.zlkhvg5.mongodb.net/Movies")
 .then(() => {
