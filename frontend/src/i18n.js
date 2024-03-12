@@ -9,14 +9,13 @@ import fr from "./i18n/fr.json"
 // or even better, manage them separated from your code: https://react.i18next.com/guides/multiple-translation-files)
 const resources = {
   en: {
-    translation: {
-      "Welcome to React": "Welcome to React and react-i18next"
-    }
+    translation: en
   },
   fr: {
-    translation: {
-      "Welcome to React": "Bienvenue à React et react-i18next"
-    }
+    translation: fr
+  },
+  es: {
+    translation: es
   }
 };
 
