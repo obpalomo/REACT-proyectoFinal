@@ -3,7 +3,7 @@ import { Link, Navigate, Route, Routes } from "react-router-dom"
 import Login from "./pages/login/Login"
 import Signup from "./pages/signup/Signup"
 import Films from "./pages/films/Films"
-import { useContext } from "react"
+import { useContext, useEffect } from "react"
 import { SessionContext } from "./contexts/SessionContext"
 import Home from "./pages/Home/Home"
 import { useTranslation } from "react-i18next"
@@ -11,6 +11,10 @@ import { useTranslation } from "react-i18next"
 function App() {
   const { t, i18n} = useTranslation();
   const { logout, user } = useContext(SessionContext)
+
+  useEffect(() => {
+
+  }, [])
 
   function changeLang(e){
     i18n.changeLanguage(e.target.value)
@@ -23,9 +27,9 @@ function App() {
           <ul>
             <li>
               <select onChange={changeLang}>
-                <option value="es">Español</option>
-                <option value="en">inglés</option>
-                <option value="fr">Francés</option>
+                <option selected={"es" === i18n.language} value="es">Español</option>
+                <option selected={"en" === i18n.language} value="en">inglés</option>
+                <option selected={"fr" === i18n.language} value="fr">Francés</option>
               </select>
             </li>  
             <li>

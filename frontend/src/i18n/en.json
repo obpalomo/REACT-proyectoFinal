@@ -1,5 +1,6 @@
 {
     "hola": "hello",
     "bienvenido": "welcome",
-    "acceso": "login"
+    "acceso": "login",
+    "email": "email"
 }
