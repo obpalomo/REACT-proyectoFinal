@@ -19,7 +19,8 @@ async function insert(req,res){
             year:req.body.year,
             synopsis:req.body.synopsis,
             category:req.body.category,
-            director:req.body.director
+            director:req.body.director,
+            image: req-body.image
         })
         await newFilm.save()
         return res.json({msg:"pelicula guardada"})
