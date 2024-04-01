@@ -7,7 +7,7 @@ export default function Login(){
 
     return(
         <>
-            <h2>{t('acceso')}</h2>
+            <h2>{t('Inicio Sesión')}</h2>
             <LoginForm></LoginForm>
         </>
     )

@@ -18,6 +18,8 @@ export default function Films(){
 import { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import { SessionContext } from "../../contexts/SessionContext";
+import { Container, Row } from "react-bootstrap";
+import Item from "../../components/item/item";
 
 export default function Films() {
     const { user } = useContext(SessionContext);
@@ -36,28 +38,22 @@ export default function Films() {
 
         fetchFilms();
 
-        // Clean up function to cancel the request if the component unmounts or the token changes
         return () => {
-            // Cancel the request or perform any cleanup if needed
         };
-    }, [user.token]); // Run effect whenever user.token changes
+    }, [user.token]);
 
     return (
         <>
-            <h2>Películas</h2>
+            <h2>Films</h2>
             {error && <p>Error: {error.message}</p>}
-            <ul>
-                {films.map(film => (
-                    <li key={film.id}>
-                        <h3>{film.title}</h3>
-                        <img src={film.image} alt="" />
-                        <p>Año: {film.year}</p>
-                        <p>Duración: {film.duration} minutos</p>
-                        
-                        {/* Puedes agregar más detalles de la película aquí */}
-                    </li>
-                ))}
-            </ul>
+            <Container>
+                <Row>
+                    {films.map((i)=> (
+                        <Item item={i}></Item>
+                    ))}
+                </Row>
+                <Row>🗑️</Row>
+            </Container>
         </>
     );
 }

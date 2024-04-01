@@ -6,7 +6,7 @@ const filmSchema = new moongose.Schema({
   synopsis: { type: String, required: false },
   category: { type: String, required: false },
   director: { type: String, require: false },
-  imaage: {type: String, require:false}
+  image: {type: String, require:false}
 });
 
 module.exports = moongose.model("films", filmSchema);

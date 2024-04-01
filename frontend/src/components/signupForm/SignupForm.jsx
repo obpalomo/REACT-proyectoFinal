@@ -23,27 +23,27 @@ export default function SignupForm(){
   }
 
   return(
-      <div class="container mt-5">
-  <div class="row justify-content-center">
-    <div class="col-md-6">
-      <div class="card">
-        <div class="card-header bg-primary text-white">{t('Registro')}</div>
-        <div class="card-body">
+      <div className="container mt-5">
+  <div className="row justify-content-center">
+    <div className="col-md-6">
+      <div className="card">
+        <div className="card-header bg-primary text-white">{t('Registro')}</div>
+        <div className="card-body">
           <div>
-            <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">{t('Correo Electrónico')}</label>
-              <InputValidation rules={[{text:'el formato de email no es válido', fn:(p) => p.match(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/) !==null}]} value={datos.email} onChange={(e) => setDatos({...datos, email: e.target.value })} type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"></InputValidation>
-              <div id="emailHelp" class="form-text">Nunca compartiremos tu correo electrónico con nadie más.</div>
+            <div className="mb-3">
+              <label htmlFor="exampleInputEmail1" className="form-label">{t('Correo Electrónico')}</label>
+              <InputValidation rules={[{text:'el formato de email no es válido', fn:(p) => p.match(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/) !==null}]} value={datos.email} onChange={(e) => setDatos({...datos, email: e.target.value })} type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"></InputValidation>
+              <div id="emailHelp" className="form-text">Nunca compartiremos tu correo electrónico con nadie más.</div>
             </div>
-            <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+            <div className="mb-3">
+              <label htmlFor="exampleInputPassword1" className="form-label">Contraseña</label>
               <InputValidation rules={[{text:'longitud menor que 8', fn:(p) => p.length >= 8}, {text:'no contiene @', fn:(p)=> p.includes("@")}]} type="password" value={datos.password} onChange={(e) => setDatos({...datos, password: e.target.value })}></InputValidation>
             </div>
-            <div class="mb-3">
-              <label for="exampleInputName" class="form-label">Nombre</label>
-              <input value={datos.name} onChange={(e) => setDatos({...datos, name: e.target.value })} type="text" class="form-control" id="exampleInputName"/>
+            <div className="mb-3">
+              <label htmlFor="exampleInputName" className="form-label">Nombre</label>
+              <input value={datos.name} onChange={(e) => setDatos({...datos, name: e.target.value })} type="text" className="form-control" id="exampleInputName"/>
             </div>
-            <button onClick={onSignup} type="submit" class="btn btn-primary">Registrarse</button>
+            <button onClick={onSignup} type="submit" className="btn btn-primary">Registrarse</button>
           </div>
         </div>
       </div>

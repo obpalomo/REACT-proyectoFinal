@@ -27,26 +27,27 @@ export default function LoginForm() {
         <div className="container mt-5">
             <div className="row justify-content-center">
                 <div className="col-md-6">
-                    <div className="card">
-                        <div className="card-header bg-primary text-white">Inicio de Sesión</div>
+                    <div className="card" >
+                        <div className="card-header bg-primary text-white" style={{background:'green'}} >Inicio de Sesión</div>
                         <div className="card-body">
                             <form onSubmit={handleSubmit(doLogin)}>
-                                <div className="mb-3">
-                                    <label htmlFor="exampleInputEmail1" className="form-label">Correo Electrónico</label>
-                                    <input type="email" {...register('email',{required:true})} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-                                    <div id="emailHelp" className="form-text">Nunca compartiremos tu correo electrónico con nadie más.</div>
-                                </div>
-                                <div className="mb-3">
-                                    <label htmlFor="exampleInputPassword1" className="form-label">Contraseña</label>
-                                    <input type="password" {...register('password',{required:true, minLength:8})} className="form-control" id="exampleInputPassword1" />
+                                <form className="form-floating">
+                                    <input type="email" {...register('email',{required:true})} className="form-control" id="floatingInputValue" aria-describedby="emailHelp" />
+                                    <label htmlFor="floatingInputValue" className="form-label">Correo Electrónico</label>
+                                </form>
+                                <br></br>
+                                <form className="form-floating">
+                                    <input type="password" {...register('password',{required:true, minLength:8})} className="form-control" id="floatingInputValue" />
+                                    <label htmlFor="floatingInputValue" className="form-label">Contraseña</label>
                                     {errors.password?.type === 'required' && <p>La contraseña es obligatoria</p>}
                                     {errors.password?.type === 'minLength' && <p>La contraseña debe tener 8 caracteres como mínimo</p>}
-                                </div>
+                                </form>
+                                <br></br>
                                 <div className="mb-3 form-check">
                                     <input type="checkbox" className="form-check-input" id="exampleCheck1" />
                                     <label className="form-check-label" htmlFor="exampleCheck1">Recuérdame</label>
                                 </div>
-                                <button type="submit" className="btn btn-primary">Iniciar Sesión</button>
+                                <button type="submit" className="btn btn-primary text-white">Iniciar Sesión</button>
                             </form>
                         </div>
                     </div>

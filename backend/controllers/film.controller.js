@@ -8,9 +8,7 @@ async function findAll(req,res){
         console.log(error);
         return res.status(500).json({msg:"error al buscar las películas"})
     }
-
 }
-
 
 async function insert(req,res){
     try {
@@ -20,7 +18,7 @@ async function insert(req,res){
             synopsis:req.body.synopsis,
             category:req.body.category,
             director:req.body.director,
-            image: req-body.image
+            image: req.body.image
         })
         await newFilm.save()
         return res.json({msg:"pelicula guardada"})
