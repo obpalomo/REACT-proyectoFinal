@@ -1,8 +1,4 @@
-import {
-  Container,
-  Nav,
-  Navbar,
-} from "react-bootstrap";
+import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { SessionContext } from "../../contexts/SessionContext";
 import { useContext } from "react";
@@ -39,11 +35,21 @@ function NavigationBar() {
                 Signup
               </Link>
             )}
+            {user ? (
               <Link to="/añadir-pelicula" className="nav-link">
                 Insert film
               </Link>
+            ) : (
+              ""
+            )}
 
-              {user ? <button className="btn btn-outline-danger" onClick={logout}>Logout</button> : ''}
+            {user ? (
+              <button className="btn btn-outline-danger" onClick={logout}>
+                Logout
+              </button>
+            ) : (
+              ""
+            )}
           </Nav>
         </Container>
       </Navbar>

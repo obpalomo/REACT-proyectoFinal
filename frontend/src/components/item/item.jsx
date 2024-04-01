@@ -21,13 +21,12 @@ export default function Item({ item }) {
           width={50}
         ></CardImg>
         <CardBody>
-          <CardTitle>{item.tile}</CardTitle>
+          <CardTitle>{item.title}</CardTitle>
           <CardSubtitle className="mb-2 text-muted">
             {item.category}
           </CardSubtitle>
           <CardText>
-            ...aqui iría una descripción...
-            <Alert variant="danger">AGOTADAS</Alert>
+            {item.synopsis} <br></br>
           </CardText>
           <ListGroup className="list-group-flush">
             <ListGroupItem>{item.year}</ListGroupItem>

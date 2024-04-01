@@ -52,7 +52,6 @@ export default function Films() {
                         <Item item={i}></Item>
                     ))}
                 </Row>
-                <Row>🗑️</Row>
             </Container>
         </>
     );
