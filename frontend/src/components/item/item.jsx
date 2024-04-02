@@ -1,5 +1,6 @@
 import {
   Alert,
+  Button,
   Card,
   CardBody,
   CardImg,
@@ -9,11 +10,16 @@ import {
   ListGroup,
   ListGroupItem,
 } from "react-bootstrap";
+import DeleteFilm from "../deleteFilm/DeleteFilm";
 
-export default function Item({ item }) {
+export default function Item({ item, onDelete }) {
+
+  const handleDelete = (filmId) => {
+    onDelete(filmId)
+  }
   return (
     <>
-      <Card className="mx-3 my-3 pt-2" style={{ width: "18rem" }}>
+      <Card className="mx-3 my-3 pt-2" style={{ width: "18rem"}}>
         <CardImg
           height={200}
           variant="top"
@@ -32,7 +38,9 @@ export default function Item({ item }) {
             <ListGroupItem>{item.year}</ListGroupItem>
           </ListGroup>
         </CardBody>
+        <DeleteFilm filmId={item.id} onDelete={handleDelete}></DeleteFilm>
       </Card>
+      
     </>
   );
 }

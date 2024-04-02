@@ -1,5 +1,6 @@
 import LoginForm from "../../components/loginForm/LoginForm"
 import { useTranslation } from "react-i18next"
+import './Login.css';
 
 export default function Login(){
 
