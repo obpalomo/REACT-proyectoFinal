@@ -34,7 +34,7 @@ export default function FormPelicula({ onInsertCard }) {
   return (
     <>
       <Form>
-        <Container>
+        <Container className="text-white fs-5">
           <Row>
             <Col sm={12} md={6} lg={6}>
               <FormGroup>

@@ -2,7 +2,8 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-image: url('https://media.istockphoto.com/id/1179771730/es/foto/proyector-de-pel%C3%ADcula-vintage-y-proyecci%C3%B3n-de-pel%C3%ADculas.jpg?s=2048x2048&w=is&k=20&c=nRTQMHBcvALLK-bFPIoRYfZ6XyT_7zd1Zhd-QxI4ofo=');
+  background-image: url('https://i.pinimg.com/originals/10/b1/ba/10b1bad21f79df5f462c1c09f12db6ff.jpg');
+  image-resolution: ;
 }
 main{
     background-size: cover;

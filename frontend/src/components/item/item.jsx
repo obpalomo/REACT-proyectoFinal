@@ -19,7 +19,7 @@ export default function Item({ item, onDelete }) {
   }
   return (
     <>
-      <Card className="mx-3 my-3 pt-2" style={{ width: "18rem"}}>
+      <Card className="mx-3 my-3 pt-2 pb-3" style={{ width: "18rem"}}>
         <CardImg
           height={200}
           variant="top"
@@ -31,16 +31,13 @@ export default function Item({ item, onDelete }) {
           <CardSubtitle className="mb-2 text-muted">
             {item.category}
           </CardSubtitle>
-          <CardText>
-            {item.synopsis} <br></br>
-          </CardText>
-          <ListGroup className="list-group-flush">
+          <ListGroup className="list-group-flush" style={{margin:0, padding:0}}>
             <ListGroupItem>{item.year}</ListGroupItem>
+            <ListGroupItem>{item.director}</ListGroupItem>
           </ListGroup>
         </CardBody>
-        <DeleteFilm filmId={item.id} onDelete={handleDelete}></DeleteFilm>
+        <DeleteFilm filmId={item._id} onDelete={handleDelete}></DeleteFilm>
       </Card>
-      
     </>
   );
 }

@@ -42,6 +42,15 @@ export default function Films() {
         };
     }, [user.token]);
 
+    const handleDelete = async (filmId) => {
+        try {
+            await axios.delete(`http://localhost:3000/api/films/${filmId}?token=${user.token}`);
+            setFilms(films.filter((film) => film._id !== filmId));
+        } catch (error) {
+            console.error("Error al eliminar la película:", error);
+        }
+    };
+
     return (
         <>
             <h2>Films</h2>
@@ -49,7 +58,7 @@ export default function Films() {
             <Container>
                 <Row>
                     {films.map((i)=> (
-                        <Item item={i}></Item>
+                        <Item key={i._id} item={i} onDelete={handleDelete}></Item>
                     ))}
                 </Row>
             </Container>
