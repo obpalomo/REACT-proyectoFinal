@@ -1,20 +1,3 @@
-/* import {useContext} from "react"
-import {SessionContext} from "../../contexts/SessionContext"
-import axios from "axios"
-
-export default function Films(){
-    const {user} = useContext(SessionContext)
-
-    axios.get(`http://localhost:3000/api/films?token=${user.token}`)
-    .then
-    .catch
-    return(
-        <>
-            <h2>Películas</h2>
-        </>
-    )
-} */
-
 import { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import { SessionContext } from "../../contexts/SessionContext";
@@ -58,7 +41,7 @@ export default function Films() {
             <Container>
                 <Row>
                     {films.map((i)=> (
-                        <Item key={i._id} item={i} onDelete={handleDelete}></Item>
+                        <Item key={i._id} item={i} onDelete={()=> handleDelete(i._id)}></Item>
                     ))}
                 </Row>
             </Container>

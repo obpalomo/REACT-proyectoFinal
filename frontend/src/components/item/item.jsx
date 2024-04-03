@@ -11,6 +11,7 @@ import {
   ListGroupItem,
 } from "react-bootstrap";
 import DeleteFilm from "../deleteFilm/DeleteFilm";
+import './Item.css'
 
 export default function Item({ item, onDelete }) {
 
@@ -27,12 +28,12 @@ export default function Item({ item, onDelete }) {
           width={50}
         ></CardImg>
         <CardBody>
-          <CardTitle>{item.title}</CardTitle>
-          <CardSubtitle className="mb-2 text-muted">
+          <CardTitle className="year bold">{item.title}</CardTitle>
+          <CardSubtitle className="mb-2 text-muted year">
             {item.category}
           </CardSubtitle>
-          <ListGroup className="list-group-flush" style={{margin:0, padding:0}}>
-            <ListGroupItem>{item.year}</ListGroupItem>
+          <ListGroup className="list-group-flush bg-dark year" style={{margin:0, padding:0}}>
+            <ListGroupItem className="year">{item.year}</ListGroupItem>
             <ListGroupItem>{item.director}</ListGroupItem>
           </ListGroup>
         </CardBody>

@@ -4,12 +4,13 @@ import axios from "axios";
 import { SessionContext } from "../../contexts/SessionContext";
 
 
-export default function DeleteFilm({filmId}){
+export default function DeleteFilm({filmId, onDelete}){
     const { user } = useContext(SessionContext);
     const handleDelete  = () => {
         axios
         .delete(`http://localhost:3000/api/films/${filmId}?token=${user.token}`)
         .then((response) => {
+            onDelete()
           console.log(response.data);
         })
         .catch((error) => {
@@ -19,7 +20,7 @@ export default function DeleteFilm({filmId}){
 
     return(
         <>
-            <Button variant="dark" onClick={handleDelete }>🗑️</Button>
+            <Button variant="dark" onClick={handleDelete}>🗑️</Button>
         </>
     )
 }
