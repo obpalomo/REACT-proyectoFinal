@@ -1,3 +1,9 @@
-h2{
-    color: white;
+h1{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-left: 225px;
+    background-image: url('https://img.freepik.com/vector-gratis/pantalla-tv-pared-luz-neon_134830-819.jpg');
+    background-repeat: no-repeat;
+    background-position: left top;
+    padding-bottom: 400px;
+    color: rgb(73, 211, 100);
 }

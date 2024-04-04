@@ -28,16 +28,16 @@ export default function LoginForm() {
         <div className="container mt-5">
             <div className="row justify-content-center">
                 <div className="col-md-6">
-                    <div className="card" >
-                        <div className="card-header bg-primary text-white" style={{background:'green'}} >Inicio de Sesión</div>
+                    <div className="card">
+                        <div className="card-header bg-secondary text-white" style={{background:'green'}} >Inicio de Sesión</div>
                         <div className="card-body">
                             <form onSubmit={handleSubmit(doLogin)}>
-                                <form className="form-floating">
+                                <form className="form-floating mb-3">
                                     <input type="email" {...register('email',{required:true})} className="form-control" id="floatingInputValue" aria-describedby="emailHelp" />
                                     <label htmlFor="floatingInputValue" className="form-label">Correo Electrónico</label>
                                 </form>
                                 <br></br>
-                                <form className="form-floating">
+                                <form className="form-floating mb-3">
                                     <input type="password" {...register('password',{required:true, minLength:8})} className="form-control" id="floatingInputValue" />
                                     <label htmlFor="floatingInputValue" className="form-label">Contraseña</label>
                                     {errors.password?.type === 'required' && <p>La contraseña es obligatoria</p>}
@@ -48,7 +48,7 @@ export default function LoginForm() {
                                     <input type="checkbox" className="form-check-input" id="exampleCheck1" />
                                     <label className="form-check-label" htmlFor="exampleCheck1">Recuérdame</label>
                                 </div>
-                                <button type="submit" className="btn btn-primary text-white">Iniciar Sesión</button>
+                                <button type="submit" className="btn btn-secondary text-white pointer" style={{alignItems:"center"}}>Iniciar Sesión</button>
                             </form>
                         </div>
                     </div>

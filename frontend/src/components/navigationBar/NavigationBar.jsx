@@ -47,7 +47,7 @@ function NavigationBar() {
             )}
 
             {user ? (
-              <button className="btn btn-outline-danger" onClick={logout}>
+              <button className="btn btn-light right" onClick={logout}>
                 Logout
               </button>
             ) : (

@@ -105,7 +105,7 @@ export default function FormPelicula({ onInsertCard }) {
           </Row>
           <Row className="my-3">
             <Col>
-              <Button onClick={insertar}>Guardar</Button>
+              <Button variant="secondary" size="lg" onClick={insertar}>Guardar</Button>
             </Col>
           </Row>
         </Container>

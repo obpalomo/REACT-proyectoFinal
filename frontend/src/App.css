@@ -3,8 +3,9 @@
   flex-direction: column;
   min-height: 100vh;
   background-image: url('https://i.pinimg.com/originals/10/b1/ba/10b1bad21f79df5f462c1c09f12db6ff.jpg');
-  image-resolution: ;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
 main{
     background-size: cover;
     background-position: center;
@@ -16,6 +17,5 @@ footer {
   color: #fff;
   padding: 20px;
   width: 100%;
-  padding-left: 300px;
   text-align: center;
 }

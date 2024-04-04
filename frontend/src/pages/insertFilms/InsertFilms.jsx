@@ -18,7 +18,7 @@ function InsertFilms() {
     }
     return (
       <>
-        <h2>Insert Film</h2>
+        <h2 className="h2 text-white" style={{textAlign:"start", margin:"5px", marginLeft:"10px", marginBottom:"20px"}}>Insert Film</h2>
         <FormPelicula onInsertCard={insertCard}></FormPelicula>
       </>
     );
